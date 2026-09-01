@@ -9,7 +9,7 @@ app = Flask("Emotion Detector")
 def sent_analyzer():
     text_to_analyze = request.args.get('textToAnalyze')
     response = emotion_detector(text_to_analyze)
-    return response.text
+    return response
 
 @app.route("/")
 def render_index_page():
