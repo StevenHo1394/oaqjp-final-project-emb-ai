@@ -1,3 +1,4 @@
+# Import the Flask libraries
 from flask import Flask, render_template, request
 
 # Import the sentiment_analyzer function from the package created
