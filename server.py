@@ -8,7 +8,12 @@ app = Flask("Emotion Detector")
 @app.route("/emotionDetector")
 def sent_analyzer():
     text_to_analyze = request.args.get('textToAnalyze')
-    response = emotion_detector(text_to_analyze)
+
+    if text_to_analyze is None:
+        response = "Invalid text! Please try again!"
+    else:    
+        response = emotion_detector(text_to_analyze)
+        
     return response
 
 @app.route("/")
