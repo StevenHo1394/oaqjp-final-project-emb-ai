@@ -12,7 +12,7 @@ def sent_analyzer():
 
     if response['dominant_emotion'] is None:
         response = "Invalid text! Please try again!."
-        
+
     return response
 
 @app.route("/")
@@ -21,4 +21,3 @@ def render_index_page():
 
 if __name__ == "__main__":
     app.run(host = "0.0.0.0", port = 5000)
-
